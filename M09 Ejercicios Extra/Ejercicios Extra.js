@@ -74,11 +74,13 @@ function capicua(numero) {
    const reversedStrNumero = strNumero.split('').reverse().join('');
 
    if (strNumero === reversedStrNumero) {
-      return 'Es capicúa';
+      return "Es capicua";
    } else {
-      return 'No es capicúa';
+      return "No es capicua";
    }
+   
 }
+
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.

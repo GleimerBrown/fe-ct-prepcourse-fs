@@ -67,7 +67,7 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   return objetoUsuario.email !== undefined;
+   return objetoUsuario.email !== undefined && objetoUsuario.email !== null;
 }
 
 function tienePropiedad(objeto, propiedad) {
@@ -137,13 +137,15 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // Precio ---> 10
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
-   // Tu código:
+
    objetoProducto.calcularPrecioDescuento = function () {
       const descuento = this.precio * this.porcentajeDeDescuento;
       return this.precio - descuento;
    };
-   return objetoProducto.calcularPrecioDescuento();
+
+   return objetoProducto.calcularPrecioDescuento(); // Devuelve el precio con descuento
 }
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
